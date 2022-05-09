@@ -1,0 +1,3 @@
+ # Aprendizados da semana
+ Nessa semana aprendemos muitas coisas na Labenu, usar o terminal, git e github, fizemos vários exercicios e também varias amizades. Conhecemos a rotina do curso e como será o curso  nas próximas semanas. Também aprendemos vários codigos, **a importância e função de cada um deles**. 
+ A Git e github tem diversas funções e uma história bem interessante. Apesar da dificuldade inicial ao usar achei bem interessante os programas e estou ansiosa para aprender a usar mais!
