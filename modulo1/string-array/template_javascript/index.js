@@ -31,17 +31,19 @@ console.log('e-mail ' + emailDoUsuario + ' cadastrado com sucesso')
 *
 *
 *
-
+*/
 
 const comidaFav = ["Arroz", "feijão", "cebola", "azeitona", "macarrão"]
-
-console.log = ("minha lista de comidas favoritas: \n",comidaFav[0] , "\n",comidaFav[1] , "\n",comidaFav[2] ,"\n", comidaFav[3] ,"\n",comidaFav[4] , "\n");
 
 
 comidaFav[1] = prompt ("Qual sua comida favorita?"); 
 
-console.log = ("minha lista de comidas favoritas: \n",comidaFav[0] , "\n",comidaFav[1] , "\n",comidaFav[2] ,"\n", comidaFav[3] ,"\n",comidaFav[4] , "\n");
-*/
+console.log("minha lista de comidas favoritas:")
+console.log(comidaFav[0]) 
+console.log(comidaFav[1]) 
+console.log(comidaFav[2]) 
+console.log(comidaFav[3])
+console.log(comidaFav[4])
 
 /*
 Essa eu tive dificuldade então pedi ajuda a um amigo para finalizar
