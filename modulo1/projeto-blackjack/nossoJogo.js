@@ -10,30 +10,36 @@
  * 
  * 
  */
-let cartasZero
-let cartasUm
-let cartasDois
-let cartasTres
 
-console.log("Boas vindas ao jogo Black Jack!")
-if (window.confirm("Vamos iniciar uma nova partida?")) {
-   for(let i = 0; i<2; i++){ 
-   cartasZero = comprarCarta()
-   cartasUm   = comprarCarta()
-   cartasDois = comprarCarta()
-   cartasTres = comprarCarta()
- }
-} else { window.alert("O jogo acabou :(!") }
-let valorUsuario = cartaZero.valor+cartaUm.valor
-let valorComputador = cartaDois.valor+cartaTres.valor
+console.log("Boas vindas ao jogo BlackJack!")
 
-console.log(`Usuário -Cartas:${cartasZero.texto},${cartasUm.texto} - Pontuação${valorUsuario} Computador - Cartas ${cartasDois.texto}, ${cartasTres.texto} - Pontuação${valorComputador}`)
 
-if(valorComputador > valorUsuario && valorComputador <= 21){ 
-   console.log(`O adversario ganhou!!`)
-}else if (valorComputador < valorUsuario && valorUsuario <= 21){
-console.log(`Você ganhou!!`)
-}else{
-   console.log(`Empatou!`)
- }
+const usuario = {
+   cartas1: comprarCarta(),
+   cartas2: comprarCarta(),
+}
+
+
+const pComputador = {
+   cartas1: comprarCarta(),
+   cartas2: comprarCarta(),
+
+}
+
+const pontuaUsuario = usuario.cartas1.valor + usuario.cartas2.valor
+const pontuaPc = pComputador.cartas1.valor + pComputador.cartas2.valor
+
+if (window.confirm("Vamos iniciar uma nova partida?") === true) {
+   console.log(`Usuário -Cartas:${usuario.cartas1.texto},${usuario.cartas2.texto} - Pontuação${pontuaUsuario} `)
+   console.log(`Computador - Cartas ${pComputador.cartas1.texto}, ${pComputador.cartas2.texto}- Pontuação${pontuaPc}`)
+
+   if (pontuaPc > pontuaUsuario && pontuaPc <= 21) {
+      console.log(`O adversario ganhou!!`)
+   } else if (pontuaPc < pontuaUsuario && pontuaUsuario <= 21) {
+      console.log(`Você ganhou!!`)
+
+
+   } else { ("Empatou!")}
+} else {
+   console.log("O jogo acabou :(!")}
 
