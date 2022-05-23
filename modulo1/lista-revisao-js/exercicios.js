@@ -20,14 +20,15 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
-}
+return array.filter((value)=>{
+  if (value%2===0)
+  return value })
+ }
 
 // EXERCÍCIO 05
-function retornaNumerosParesElevadosADois(array) {
- 
+function retornaNumerosParesElevadosADois(array) { 
+  return array.filter((value)=> {if (value%2===0) return value}).map ((value)=>value**2) 
 }
-
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
   
@@ -86,4 +87,4 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
    
-}
+ }
