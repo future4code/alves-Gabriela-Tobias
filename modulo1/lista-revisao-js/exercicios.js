@@ -61,22 +61,30 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-let numerosPares = [ ]
-for (let i = 0 ;i<=2*(n-1); i++)
-if(i%2===0){
-  numerosPares.push(i)
+  let numerosPares = []
+  for (let i = 0; i <= 2 * (n - 1); i++)
+    if (i % 2 === 0) {
+      numerosPares.push(i)
+    }
+  return numerosPares
 }
-return numerosPares
-}
-
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+  if (ladoA == ladoB && ladoA == ladoC) {
+    return "Equilátero"
+  } else if(ladoA == ladoB && ladoB != ladoC
+    || ladoA == ladoC && ladoA != ladoB
+    || ladoB == ladoA|| ladoB != ladoC) {
+    return "Isósceles"
+  } else {
+    return "Escaleno"
 }
-
+}
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-
+array.sort((a,b)=>a-b)
+let arraySegundoMenor= [array[array.length-2],array[1]]
+return arraySegundoMenor
 }
 
 // EXERCÍCIO 11
