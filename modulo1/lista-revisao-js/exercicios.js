@@ -72,29 +72,38 @@ function retornaNPrimeirosPares(n) {
 function classificaTriangulo(ladoA, ladoB, ladoC) {
   if (ladoA == ladoB && ladoA == ladoC) {
     return "Equilátero"
-  } else if(ladoA == ladoB && ladoB != ladoC
-    || ladoA == ladoC && ladoA != ladoB
-    || ladoB == ladoA|| ladoB != ladoC) {
+  } else if (ladoA != ladoB && ladoB == ladoC || ladoA == ladoC && ladoA != ladoB
+    || ladoB == ladoA && ladoB != ladoC) {
     return "Isósceles"
   } else {
     return "Escaleno"
-}
+  }
 }
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-array.sort((a,b)=>a-b)
-let arraySegundoMenor= [array[array.length-2],array[1]]
-return arraySegundoMenor
+  array.sort((a, b) => a - b)
+  let arraySegundoMenor = [array[array.length - 2], array[1]]
+  return arraySegundoM
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
-
+  const atores = []
+  for (let i = 0; i <= filme.atores.length - 1; i++) {
+    if (filme.atores[i] != filme.atores[0]) {
+      filme.atores[i] = ' ' + filme.atores[i]
+    }
+  }
+  return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
 }
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-
+  let pessoaAnonima = {
+    ...pessoa,
+    nome: "ANÔNIMO"
+}
+return pessoaAnonima
 }
 
 // EXERCÍCIO 13A
