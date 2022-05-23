@@ -43,24 +43,30 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-let nMaior
-let nMenor
-if (num1 > num2) {nMaior=num1, nMenor=num2
-}else{nMaior=num2, nMenor = num1}
-let divisorNumero
-if(nMaior%nMenor===0){divisorNumero = true}
-else{divisorNumero=false}
-let objetoDoisNumeros= {
-  maiorNumero : nMaior,
-  maiorDivisivelPorMenor : divisorNumero,
-  diferenca : nMaior - nMenor
-}
-return objetoDoisNumeros
+  let nMaior
+  let nMenor
+  if (num1 > num2) {
+    nMaior = num1, nMenor = num2
+  } else { nMaior = num2, nMenor = num1 }
+  let divisorNumero
+  if (nMaior % nMenor === 0) { divisorNumero = true }
+  else { divisorNumero = false }
+  let objetoDoisNumeros = {
+    maiorNumero: nMaior,
+    maiorDivisivelPorMenor: divisorNumero,
+    diferenca: nMaior - nMenor
+  }
+  return objetoDoisNumeros
 }
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-
+let numerosPares = [ ]
+for (let i = 0 ;i<=2*(n-1); i++)
+if(i%2===0){
+  numerosPares.push(i)
+}
+return numerosPares
 }
 
 // EXERCÍCIO 09
