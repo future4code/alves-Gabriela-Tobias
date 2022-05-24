@@ -4,33 +4,35 @@
 
 
 // EXERCÍCIO 01
+
 function retornaTamanhoArray(array) {
   return array.length
 }
-
 // EXERCÍCIO 02
+
 function retornaArrayInvertido(array) {
   return array.reverse()
 }
-
 // EXERCÍCIO 03
+
 function retornaArrayOrdenado(array) {
   return array.sort((a, b) => a - b)
 }
-
 // EXERCÍCIO 04
+
 function retornaNumerosPares(array) {
   return array.filter((value) => {
     if (value % 2 === 0)
       return value
   })
 }
-
 // EXERCÍCIO 05
+
 function retornaNumerosParesElevadosADois(array) {
   return array.filter((value) => { if (value % 2 === 0) return value }).map((value) => value ** 2)
 }
 // EXERCÍCIO 06
+
 function retornaMaiorNumero(array) {
   let numeroMaior = array[0]
   for (let i = 0; i < array.length; i++) {
@@ -40,8 +42,8 @@ function retornaMaiorNumero(array) {
   }
   return numeroMaior
 }
-
 // EXERCÍCIO 07
+
 function retornaObjetoEntreDoisNumeros(num1, num2) {
   let nMaior
   let nMenor
@@ -58,8 +60,8 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
   }
   return objetoDoisNumeros
 }
-
 // EXERCÍCIO 08
+
 function retornaNPrimeirosPares(n) {
   let numerosPares = []
   for (let i = 0; i <= 2 * (n - 1); i++)
@@ -69,6 +71,7 @@ function retornaNPrimeirosPares(n) {
   return numerosPares
 }
 // EXERCÍCIO 09
+
 function classificaTriangulo(ladoA, ladoB, ladoC) {
   if (ladoA == ladoB && ladoA == ladoC) {
     return "Equilátero"
@@ -80,13 +83,14 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
   }
 }
 // EXERCÍCIO 10
+
 function retornaSegundoMaiorESegundoMenor(array) {
   array.sort((a, b) => a - b)
   let arraySegundoMenor = [array[array.length - 2], array[1]]
   return arraySegundoMenor
 }
-
 // EXERCÍCIO 11
+
 function retornaChamadaDeFilme(filme) {
   const atores = []
   for (let i = 0; i <= filme.atores.length - 1; i++) {
@@ -96,8 +100,8 @@ function retornaChamadaDeFilme(filme) {
   }
   return `Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores}.`
 }
-
 // EXERCÍCIO 12
+
 function retornaPessoaAnonimizada(pessoa) {
   let pessoaAnonima = {
     ...pessoa,
@@ -105,8 +109,8 @@ function retornaPessoaAnonimizada(pessoa) {
   }
   return pessoaAnonima
 }
-
 // EXERCÍCIO 13A
+
 function retornaPessoasAutorizadas(pessoas) {
 
   let pessoasAutor = pessoas.filter((item) => item.altura >= 1.5)
@@ -114,8 +118,8 @@ function retornaPessoasAutorizadas(pessoas) {
   pessoasAutor = pessoasAutor.filter((item) => item.idade < 60)
   return pessoasAutor
 }
-
 // EXERCÍCIO 13B
+
 function retornaPessoasNaoAutorizadas(pessoas) {
   let pessoasNaoAutor = pessoas.filter((pessoas) => {
     if (pessoas.altura <= 1.5 || pessoas.idade <= 14 || pessoas.idade >= 60) {
@@ -124,9 +128,8 @@ function retornaPessoasNaoAutorizadas(pessoas) {
   })
   return pessoasNaoAutor
 }
-
-
 // EXERCÍCIO 14
+
 function retornaContasComSaldoAtualizado(contas) {
   let total = contas.map((conta) => {
     let soma = conta.compras.reduce((itemAnt, itemAtual) => itemAnt + itemAtual, 0)
@@ -135,16 +138,16 @@ function retornaContasComSaldoAtualizado(contas) {
   })
   return total
 }
-
 // EXERCÍCIO 15A
-function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
-  let listaOrdem = consultas.sort(function (a, b) {
+function retornaArrayOrdenadoAlfabeticamente(consultas) {
+let listaOrdem = consultas.sort(function (a, b) {
     return a.nome < b.nome ? -1 : a.nome > b.nome ? 1 : 0
   })
   return listaOrdem
 }
 // EXERCÍCIO 15B
+
 function retornaArrayOrdenadoPorData(consultas) {
   let listaOrdenada = consultas.sort(
     (primeiraConsulta, segundaConsulta) => new Date(primeiraConsulta.dataDaConsulta.split('/').reverse()).getTime() - new Date(segundaConsulta.dataDaConsulta.split('/').reverse()).getTime())
