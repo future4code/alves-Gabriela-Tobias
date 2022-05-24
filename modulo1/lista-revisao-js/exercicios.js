@@ -83,7 +83,7 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 function retornaSegundoMaiorESegundoMenor(array) {
   array.sort((a, b) => a - b)
   let arraySegundoMenor = [array[array.length - 2], array[1]]
-  return arraySegundoM
+  return arraySegundoMenor
 }
 
 // EXERCÍCIO 11
@@ -102,8 +102,8 @@ function retornaPessoaAnonimizada(pessoa) {
   let pessoaAnonima = {
     ...pessoa,
     nome: "ANÔNIMO"
-}
-return pessoaAnonima
+  }
+  return pessoaAnonima
 }
 
 // EXERCÍCIO 13A
@@ -118,7 +118,12 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
-
+    let total = contas.map((conta) => {
+        let soma = conta.compras.reduce((itemAnt, itemAtual) => itemAnt + itemAtual, 0)
+        let saldo = conta.saldoTotal
+        return { ...conta, saldoTotal: saldo - soma, compras: [] }
+    })
+    return total
 }
 
 // EXERCÍCIO 15A
