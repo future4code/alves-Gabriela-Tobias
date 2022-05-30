@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap");
+/* font-family: 'Nanum Myeongjo', serif; */
+body {
+    font-size: 100%;
+    background: linear-gradient(to left, rgb(255, 130, 151), rgb(255, 217, 224));
+  }
+  .cabecalho {
+    border: dotted 2px rgb(255, 130, 150);
+    margin-bottom: 100px;
+    text-align: left;
+    padding: 10px;
+  
+  }
+  .textodescricao{
+    font-family: Nanum Myeongjo;
+    font-size: 18px;
+    color: rgb(255, 88, 116)
+  }
+.Titulo{ 
+    font-family: Nanum Myeongjo;
+    font-size: 35px;
+    color: rgb(255, 88, 116)
+  }
