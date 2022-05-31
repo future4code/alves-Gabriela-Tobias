@@ -1,0 +1,27 @@
+.cabecalho {
+  background-color: mediumvioletred;
+  padding: 2px;
+}
+.cabecalho img {
+  height: 25px;
+}
+.menuprodutos img {
+  height: 20px;
+  width: 20px;
+}
+.menufundo {
+  background-color: #f2d0e0;
+  width: 350px;
+  height: 1000px;
+}
+.flex-container img {
+  width: 250px;
+}
+.flex-container{
+ display: flex;
+
+  }
+  .flex-item4{
+=
+      flex-wrap: wrap;
+  }
