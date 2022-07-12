@@ -19,10 +19,10 @@ const ProfileInfo = styled.div`
   padding: 0 16px;
 `;
 
-// const Botao = styled.button`
-// display: flex;
-// justify-content: center;
-// `
+const Botao = styled.button`
+display: flex;
+justify-content: center;
+`
  
 
 export default function Perfil(props) {
