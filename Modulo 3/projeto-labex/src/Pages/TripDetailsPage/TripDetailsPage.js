@@ -1,3 +1,17 @@
-import React,{ useState, useEffect } from "react";
-import BaseUrl from '../../Components/BaseUrl';
-import Header from '../../Components/Header';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+const TripDetailsPage = () => {
+    const navigate = useNavigate();
+    return (
+      <div>
+        <h1>TRIP DETAILS PAGE</h1>
+        <p>EM breve mais infos!</p>
+        <button onClick={() => navigate('/')}>VOLTAR</button>
+      </div>
+    );
+  };
+  
+  export default TripDetailsPage;
+

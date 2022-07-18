@@ -1,17 +1,25 @@
-import astronautaferias from '../../Img/astronautaferias';
 import React from 'react';
 import{ useNavigate } from 'react-router-dom';
-import { home } from '../../Router/coordinator';
+import{ Botao, Container } from '../HomePage/HomeStyle'
 
- function HomePage() {
+ 
+const Home = () => {  
+  const navigate = useNavigate();
+  
 
-    const navigate = useNavigate()
-    
+  const goTripDetails = () => { 
+    navigate('listTrip');
+  }
+
+  const goToLogin = () => {
+    navigate('login');
+  }
 
   return (
-    <div>
-        <img src={astronautaferias}/>
-    </div>
+    <Container>
+      <Botao onClick={goTripDetails}>Viagens</Botao>
+      <Botao onClick={goToLogin}>Login</Botao>
+    </Container>
   )
 }
-export default HomePage;
+export default Home;
