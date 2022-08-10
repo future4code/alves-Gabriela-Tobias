@@ -1,12 +1,12 @@
 {
   "name": "package-json",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gabriela Tobias",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
-
