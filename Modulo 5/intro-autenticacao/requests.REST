@@ -1,0 +1,24 @@
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+	"email": "murilo@labenu.com.br",
+	"password": "123456789"
+}
+
+###
+# @name login
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+	"email": "murilo@labenu.com.br",
+	"password": "123456789"
+}
+
+###
+@token = {{login.response.body.token}}
+
+GET http://localhost:3003/user/profile
+Content-Type: application/json
+Authorization: {{token}}
