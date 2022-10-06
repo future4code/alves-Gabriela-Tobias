@@ -1,0 +1,97 @@
+# SignUp
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+    "name": "Murilo",
+    "email": "muh@gmail.com.br",
+    "password": "123456",
+    "role": "ADMIN"
+}
+
+###
+# Login
+# @name login
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email": "muh@gmail.com.br",
+    "password": "123456"
+}
+
+###
+@token = {{login.response.body.token}}
+# Registrar banda
+POST http://localhost:3003/band
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "name": "Megadeth",
+    "musicGenre": "Thrash metal",
+    "responsible": "Dave Mustaine"
+}
+
+###
+# Pegar banda por nome ou id
+GET http://localhost:3003/band?search=megadeth
+
+###
+# Criar show
+POST http://localhost:3003/show
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "bandId": "668fbd4a-0bb0-4d6e-9567-edf9270560d5",
+    "weekDay": "DOMINGO",
+    "startTime": 18,
+    "endTime": 19
+}
+
+###
+# Pegar shows pelo dia
+GET http://localhost:3003/show/SABADO
+
+###
+# Criar Ingresso
+POST http://localhost:3003/ticket
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "ticketName": "Love Metal Tour",
+    "price": 200,
+    "totalQuantity": 5000,
+    "showId": "96533725-9a9d-45ac-b3cf-8f9bccbcf2b8"
+}
+
+###
+# Comprar ingresso
+POST http://localhost:3003/ticket/purchase
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "ticketName": "Love Metal Tour",
+    "ticketQuantity": 100
+}
+
+###
+# Adicionar foto
+POST http://localhost:3003/photo
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "photo": "https://himoksensanomat.fi/wp-content/uploads/nightwish2-1024x684.jpg",
+    "showId": "21e7db9d-1c89-4b44-a1d6-54d546c602fd"
+}
+
+###
+# Pegar fotos por Id do show
+
+GET http://localhost:3003/photo/96533725-9a9d-45ac-b3cf-8f9bccbcf2b8
+Authorization: {{token}}
+
